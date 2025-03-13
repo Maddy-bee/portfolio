@@ -37,11 +37,11 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        FFC107: '#FFC107',\
-        3498db: '#3498db',
-        FF5722: '#FF5722',
-        FFFBE6: '#FFFBE6',
-        333333: '#333333',
+        'FFC107': '#FFC107',
+        '3498db': '#3498db',
+        'FF5722': '#FF5722',
+        'FFFBE6': '#FFFBE6',
+        '333333': '#333333',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -50,6 +50,6 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [import("tailwindcss-animate")],
 }
 

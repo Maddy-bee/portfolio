@@ -13,6 +13,16 @@
 body {
   color: var(--text);
   background: var(--background);
+  cursor: url(/images/small-bee.png) 16 16, auto;
+}
+
+button, 
+.btn,
+a[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
 }
 
 @layer base {
