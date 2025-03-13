@@ -1,26 +1,39 @@
 import { ExternalLink, Github } from "lucide-react"
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  liveDemo?: string;
+  github: string;
+}
+const projects: Project[]= [
   {
-    title: "Project 1",
-    description: "A brief description of Project 1 and its purpose.",
-    technologies: ["React", "Node.js", "MongoDB"],
-    liveDemo: "https://project1.com",
-    github: "https://github.com/yourusername/project1",
+    title: "Novari",
+    description: "We built Novari as our final project at SoC. Our aim was to create a positive and encouraging space for users to go on their own personal growth journey and connect to communities. In two days, we created our problem statement, planned and prototyped our product on Figma. We then spent the rest of the week building our full-stack app in a mixture of mob, paired and individual programming. Finally, we created and gave a professional presentation to a group of industry experts. Key features include daily positive quotations fetched from an open-source API, the user can assert preferences for the tasks they are given and users can use filters to find local communities that suit their specific goals. Guest login details are email: guest@demo.com password: demopassword1234.",
+    technologies: ["Next.js", "TypeScript", "Sentry"],
+    liveDemo: "https://well-being-app-final-project.vercel.app/auth/signin",
+    github: "https://github.com/AJHemmings/Novari",
   },
   {
-    title: "Project 2",
-    description: "A brief description of Project 2 and its purpose.",
-    technologies: ["Vue.js", "Express", "PostgreSQL"],
-    liveDemo: "https://project2.com",
-    github: "https://github.com/yourusername/project2",
+    title: "Make a Beeline into Tech Blog",
+    description: "We were tasked to create educational material on a topic of our choice. I decided to build and deploy this blog targeted at beginners. My first blog post demonstrated knowledge related to TypeScript interfaces. I also built a separate GitHub repo workshop where the user could apply their knowledge. One of the non-technical challenges was trying to come up with all of the bee related metaphors.",
+    technologies: ["Next.js", "TypeScript", "CSS(Modular)"],
+    liveDemo: "https://make-a-beeline-into-tech.vercel.app/",
+    github: "https://github.com/Maddy-bee/beeline-blog",
   },
   {
-    title: "Project 3",
-    description: "A brief description of Project 3 and its purpose.",
-    technologies: ["Angular", "Django", "MySQL"],
-    liveDemo: "https://project3.com",
-    github: "https://github.com/yourusername/project3",
+    title: "My Movie Recommendation Library",
+    description: "Users can store new movies by searching for a movie title and clicking the ‘Save my Movies’ button. First, we use the OMDB API to fetch the movie data. This data is then embedded as vectors using OpenAI's API and stored in Pinecone’s database. Later, when the user wants a personalised recommendation, they can search for a movie, genre or even a keyword to retrieve a list of results. When a user enters a query, the app generates an embedding of the input using OpenAI's API and this embedding is used to query Pinecone for the most relevant movie entries. The app then uses the results of this search to generate tailored recommendations.",
+    technologies: ["Pinecone Vector Database", "OpenAI", "Tailwind"],
+    liveDemo: "https://ai-hackathon-my-movie-recommendation-library.vercel.app/",
+    github: "https://github.com/Maddy-bee/ai-hackathon-my-movie-recommendation-library",
+  },
+  {
+    title: "Dungeons and Dragons API",
+    description: "A personal project dedicated to a family member. Using JSON data, I have created a RESTful API with full CRUD functionality. Using a platform like Postman, the user can create, retrieve, edit and delete a list of Dungeons and Dragons characters. This was my MVP 1, my next version will be a full stack application connected to a database with a front-end UI. ",
+    technologies: ["Node.js", "JavaScript", "Express"],
+    github: "https://github.com/Maddy-bee/d-and-d-character-API",
   },
 ]
 

@@ -9,7 +9,7 @@ export default function Hero() {
           <div className="md:w-1/2 mb-8 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold text-[#172554] mb-4">Hi, I&apos;m Madeleine Walsh</h1>
             <p className="text-xl text-[#333333] mb-6">
-              A passionate web developer with a love for creating beautiful and functional websites. Just like bees
+              A passionate junior software engineer with a love for creating beautiful and functional websites. Just like bees
               pollinate flowers, I bring ideas to life through code.
             </p>
             <div className="flex items-center space-x-4 text-[#172554]">
