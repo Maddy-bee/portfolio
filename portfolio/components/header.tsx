@@ -31,17 +31,17 @@ export default function Header() {
   return (
     <header className="bg-[#FFC107] p-4 sticky top-0 z-10">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
           <Hexagon className="w-8 h-8 text-[#333333]" />
-          <span className="text-xl font-bold text-[#333333]">Madeleine Walsh</span>
-        </Link>
+          <span className="text-2xl text-[#172554] font-bold text-[#333333]">Madeleine Walsh</span>
+          </div>
         <nav>
-          <ul className="flex space-x-4">
+          <ul className="text-xl flex space-x-4">
             {["about", "tech-stack", "soft-skills", "projects", "resume", "contact"].map((section) => (
               <li key={section}>
                 <Link
                   href={`#${section}`}
-                  className={`text-[#333333] hover:text-[#FF5722] ${activeSection === section ? "font-bold" : ""}`}
+                  className={`text-[#172554] hover:font-bold ${activeSection === section ? "font-bold" : ""}`}
                 >
                   {section
                     .split("-")

@@ -28,15 +28,15 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-[#FFFBE6]">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-[#333333] mb-12">Featured Projects</h2>
+        <h2 className="text-3xl font-bold text-center text-[#172554] mb-12">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.title} className="bg-white rounded-lg shadow-md overflow-hidden p-6">
-              <h3 className="text-xl font-semibold text-[#333333] mb-2">{project.title}</h3>
-              <p className="text-[#333333] mb-4">{project.description}</p>
+            <div key={project.title} className="bg-white rounded-xl shadow-md overflow-hidden p-6">
+              <h3 className="text-xl font-semibold text-[#172554]] mb-2">{project.title}</h3>
+              <p className="text-[#172554] mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
-                  <span key={tech} className="bg-[#FFC107] text-[#333333] px-2 py-1 rounded text-sm">
+                  <span key={tech} className="bg-[#FFC107] text-[#172554] px-2 py-1 rounded text-sm">
                     {tech}
                   </span>
                 ))}
@@ -55,7 +55,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-[#333333] hover:text-[#1a1a1a]"
+                  className="flex items-center text-[#172554] hover:text-[#1a1a1a]"
                 >
                   <Github className="w-4 h-4 mr-1" />
                   GitHub

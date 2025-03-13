@@ -32,14 +32,14 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <section id="tech-stack" className="py-20 bg-[#3498db]">
+    <section id="tech-stack" className="py-20 bg-[#172554]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-white mb-12">Tech Stack</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {techStack.map((tech) => (
-            <div key={tech.name} className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md">
+            <div key={tech.name} className="flex flex-col items-center bg-white p-6 rounded-xl shadow-md">
               <tech.icon className="w-12 h-12 text-[#FFC107] mb-4" />
-              <span className="text-lg font-semibold text-[#333333]">{tech.name}</span>
+              <span className="text-lg font-semibold text-[#172554]">{tech.name}</span>
             </div>
           ))}
         </div>
