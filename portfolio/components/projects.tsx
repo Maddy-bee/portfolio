@@ -97,7 +97,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         
         <div className="mt-4 flex flex-wrap justify-center gap-2">
           {project.technologies.map((tech) => (
-            <span key={tech} className="bg-[#FFC107] text-[#172554] px-2 py-1 rounded text-sm">
+            <span key={tech} className="bg-[#FFC107] text-[#172554] text-xl px-2 py-1 rounded text-sm">
               {tech}
             </span>
           ))}
