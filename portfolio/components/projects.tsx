@@ -1,4 +1,7 @@
-import { ExternalLink, Github } from "lucide-react"
+"use client"
+
+import { ExternalLink, Github } from "lucide-react";
+import {useState} from "react";
 
 interface Project {
   title: string;
@@ -37,6 +40,73 @@ const projects: Project[]= [
   },
 ]
 
+const ProjectCard = ({ project }: { project: Project }) => {
+  const [expanded, setExpanded] = useState(false);
+  const maxLength = 150;
+  const needsReadMore = project.description.length > maxLength;
+
+  return (
+    <div 
+      className={`bg-white rounded-xl shadow-md overflow-hidden flex flex-col ${expanded ? "h-auto" : "h-96"}`}
+    >
+      <div className="bg-gray-50 p-4 flex justify-end space-x-4">
+        {project.liveDemo && (
+          <a
+            href={project.liveDemo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-[#5b21b6] hover:text-[#9d174d]"
+          >
+            <ExternalLink className="w-4 h-4 mr-1" />
+            Live Demo
+          </a>
+        )}
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center text-[#172554] hover:text-[#1a1a1a]"
+        >
+          <Github className="w-4 h-4 mr-1" />
+          GitHub
+        </a>
+      </div>
+      
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="text-xl text-center font-semibold text-[#172554] mb-4">{project.title}</h3>
+        
+        <div className="overflow-hidden flex-grow">
+          <p className="text-[#172554] text-center px-2">
+            {expanded 
+              ? project.description 
+              : needsReadMore
+                ? `${project.description.substring(0, maxLength)}...`
+                : project.description
+            }
+          </p>
+          
+          {needsReadMore && (
+            <button 
+              onClick={() => setExpanded(!expanded)}
+              className="mt-2 text-[#5b21b6] hover:text-[#9d174d] font-medium text-center block mx-auto"
+            >
+              {expanded ? "Read less" : "Read more"}
+            </button>
+          )}
+        </div>
+        
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
+          {project.technologies.map((tech) => (
+            <span key={tech} className="bg-[#FFC107] text-[#172554] px-2 py-1 rounded text-sm">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-[#FFFBE6]">
@@ -44,41 +114,10 @@ export default function Projects() {
         <h2 className="text-3xl font-bold text-center text-[#172554] mb-12">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.title} className="bg-white rounded-xl shadow-md overflow-hidden p-6">
-              <h3 className="text-xl font-semibold text-[#172554]] mb-2">{project.title}</h3>
-              <p className="text-[#172554] mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech) => (
-                  <span key={tech} className="bg-[#FFC107] text-[#172554] px-2 py-1 rounded text-sm">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex justify-between">
-                <a
-                  href={project.liveDemo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-[#3498db] hover:text-[#2980b9]"
-                >
-                  <ExternalLink className="w-4 h-4 mr-1" />
-                  Live Demo
-                </a>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-[#172554] hover:text-[#1a1a1a]"
-                >
-                  <Github className="w-4 h-4 mr-1" />
-                  GitHub
-                </a>
-              </div>
-            </div>
+            <ProjectCard key={project.title} project={project} />
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
-
