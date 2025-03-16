@@ -9,8 +9,8 @@ export default function Hero() {
           <div className="md:w-1/2 mb-8 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold text-[#172554] mb-4">Hi, I&apos;m Madeleine Walsh</h1>
             <p className="text-xl text-[#333333] mb-6">
-              A passionate junior software engineer with a love for creating beautiful and functional websites. Just like bees
-              pollinate flowers, I bring ideas to life through code.
+              A passionate junior software engineer with a love for building creative and functional websites. A recent School of Code Graduate, I have experience building full stack applications. Take a look at some of my projects below. Just like bees
+              pollinate flowers, I aspire to bring ideas to life through code.
             </p>
             <div className="flex items-center space-x-4 text-[#172554]">
               <Flower className="w-6 h-6" />
