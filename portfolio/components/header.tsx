@@ -9,14 +9,14 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "tech-stack", "soft-skills", "projects", "resume", "contact"]
+      const sections = ["about", "tech-stack", "soft-skills", "projects", "professional-profiles", "contact"]
       const scrollPosition = window.scrollY
 
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
           const { offsetTop, offsetHeight } = element
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          if (scrollPosition >= offsetTop -50 && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section)
             break
           }
@@ -37,7 +37,7 @@ export default function Header() {
           </div>
         <nav>
           <ul className="text-xl flex space-x-4">
-            {["about", "tech-stack", "soft-skills", "projects", "resume", "contact"].map((section) => (
+            {["about", "tech-stack", "soft-skills", "projects", "professional-profiles", "contact"].map((section) => (
               <li key={section}>
                 <Link
                   href={`#${section}`}
