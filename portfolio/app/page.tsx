@@ -3,9 +3,9 @@ import Hero from "@/components/hero"
 import TechStack from "@/components/tech-stack"
 import SoftSkills from "@/components/soft-skills"
 import Projects from "@/components/projects"
-import Resume from "@/components/resume"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
+import ProfessionalProfiles from "@/components/professional-profiles"
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <TechStack />
       <SoftSkills />
       <Projects />
-      <Resume />
+      <ProfessionalProfiles />
       <Contact />
       <Footer />
     </main>
