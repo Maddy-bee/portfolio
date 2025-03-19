@@ -13,6 +13,8 @@ import {
   GitBranch,
 } from "lucide-react"
 
+import { FaGithub } from "react-icons/fa";
+
 const techStack = [
   { name: "JavaScript", icon: Code },
   { name: "CSS", icon: FileCode },
@@ -28,6 +30,7 @@ const techStack = [
   { name: "HTML 5", icon: FileCode },
   { name: "Playwright", icon: Play },
   { name: "Git", icon: GitBranch },
+  { name: "GitHub Actions", icon: FaGithub}
 ]
 
 export default function TechStack() {
