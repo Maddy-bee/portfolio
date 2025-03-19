@@ -1,4 +1,5 @@
 //import { FileText } from "lucide-react"
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function ProfessionalProfiles() {
   return (
@@ -18,22 +19,24 @@ export default function ProfessionalProfiles() {
         </a> */}
         <div className="mt-12">
           <h3 className="text-4xl font-semibold text-[#172554] mb-10">Professional Profiles</h3>
-          <div className="flex justify-center space-x-6">
+          <div className="flex flex-col items-center justify-center ">
             <a
               href="https://www.linkedin.com/in/madeleine-walsh"
               target="_blank"
               rel="noopener noreferrer"
-              className=" text-2xl text-[#172554] hover:text-[#0077b5]"
+              className=" flex flex-col items-center text-2xl mb-5 text-[#172554] hover:text-[#0077b5]"
             >
-              LinkedIn
+              <FaLinkedin className="w-8 h-8 mb-2"/> 
+              LinkedIn 
             </a>
             <a
               href="https://github.com/madeleine-walsh"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl text-[#172554] hover:text-[#0077b5]"
+              className="flex flex-col items-center text-2xl text-[#172554] hover:text-[#0077b5]"
             >
-              GitHub
+              <FaGithub className="w-8 h-8 mb-2" />
+              GitHub 
             </a>
           </div>
         </div>
