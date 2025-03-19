@@ -17,7 +17,7 @@ export default function ProfessionalProfiles() {
           Download Resume (PDF)
         </a> */}
         <div className="mt-12">
-          <h3 className="text-4xl font-semibold text-[#172554] mb-4">Professional Profiles</h3>
+          <h3 className="text-4xl font-semibold text-[#172554] mb-10">Professional Profiles</h3>
           <div className="flex justify-center space-x-6">
             <a
               href="https://www.linkedin.com/in/madeleine-walsh"

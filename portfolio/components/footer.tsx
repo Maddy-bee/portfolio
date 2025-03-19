@@ -1,4 +1,4 @@
-import { Hexagon, Github, Linkedin } from "lucide-react"
+import { Hexagon, } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
             <Hexagon className="w-8 h-8 text-[#FFC107] mr-2" />
             <span className="text-xl font-bold">Madeleine Walsh</span>
           </div>
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <a
               href="https://github.com/madeleine-walsh"
               target="_blank"
@@ -26,7 +26,7 @@ export default function Footer() {
             >
               <Linkedin className="w-6 h-6" />
             </a>
-          </div>
+          </div> */}
         </div>
         <div className="mt-4 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} Madeleine Walsh. All rights reserved.</p>
