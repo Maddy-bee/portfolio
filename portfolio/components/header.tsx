@@ -6,19 +6,42 @@ import { useState, useEffect } from "react"
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("")
+  
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["about", "tech-stack", "soft-skills", "projects", "professional-profiles", "contact"]
       const scrollPosition = window.scrollY
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+
+
+      const isAtBottom = scrollPosition + windowHeight >= documentHeight 
+
+      
+      if (isAtBottom) {
+        setActiveSection("contact")
+        return
+      }
 
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
           const { offsetTop, offsetHeight } = element
-          if (scrollPosition >= offsetTop -50 && scrollPosition < offsetTop + offsetHeight) {
+          
+          
+          const sectionTop = offsetTop
+          const sectionBottom = offsetTop + offsetHeight
+
+          if (scrollPosition + windowHeight / 4 >= sectionTop && scrollPosition + windowHeight / 4 < sectionBottom) {
             setActiveSection(section)
-            break
+          }
+          
+          else if (scrollPosition + windowHeight / 4 >= sectionBottom) {
+            
+            if (activeSection === section) {
+              setActiveSection("")
+            }
           }
         }
       }
@@ -28,6 +51,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+ 
   return (
     <header className="bg-[#FFC107] p-4 sticky top-0 z-10">
       <div className="container mx-auto flex justify-between items-center">
