@@ -21,6 +21,7 @@ const techStack = [
   { name: "Node.js", icon: Server },
   { name: "React", icon: Globe },
   { name: "SQL", icon: Database },
+  { name: "Python", icon: Code },
   { name: "Next.js", icon: Layout },
   { name: "TypeScript", icon: Braces },
   { name: "Vitest", icon: TestTube },
